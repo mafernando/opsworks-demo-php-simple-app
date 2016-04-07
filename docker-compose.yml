@@ -1,0 +1,12 @@
+---
+version: '2'
+services:
+  common:
+    build: "."
+  app:
+    extends:
+      service: common
+    ports:
+    - 80:80
+    command: "/usr/sbin/apache2ctl -D FOREGROUND"
+
